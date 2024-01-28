@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+
+<style>
+  body{
+    background-color: black;
+  }
+    #heading {
+      position: fixed;
+      text-align: center;
+      width: 97.3%;
+      height: 10vh;
+      background-color: black;
+      color: green;
+      top: 0%;
+      left: 0%;
+      padding-top: 3vh;
+      padding-bottom: 3vh
+      font-size: 150%;
+      
+      object-fit: cover;
+      border-radius: 60px;
+      border: 3px solid green;
+      
+      
+    }
+    #area{
+    
+    position: fixed;
+    border-radius: 60px;
+    width: 94.8%;
+    height: 41.5vh;
+    padding-top: 3vh;
+    padding-left: 10vh;
+    font-size: 120%;
+       background-color: black;
+       
+       margin-top: 12.8vh;
+       margin-left: -3vh;
+       color: green;
+       border-color: green;
+       border-width: 3px;
+     }
+          #he{
+       
+       position: fixed;
+       top: 63vh;
+       left: 0.3vh;
+       
+       width: 97.3%;
+       height: 10vh;
+       text-align: center;
+       padding-top: 4vh;
+       padding-bottom: 2vh;
+       font-size: 150%;
+       color: green;
+       border: 3px solid green;
+      border-radius: 60px;
+       background-color: black;
+       
+     }
+     .sub{
+       padding-left: 40vh;
+     }
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: black;
+  }
+    video{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0%;
+        top: 0%;
+      
+    }
+  
+
+    #heading {
+      position: fixed;
+      text-align: center;
+      width: 97.3%;
+      height: 9vh;
+      background-color: black;
+      color: green;
+      top: 0%;
+      left: 0%;
+      padding-top: 5vh;
+      font-size: 150%;
+      object-fit: cover;
+      border-radius: 60px;
+      border: 3px solid green;
+      
+      
+    }
+   
+     #area{
+    
+    position: fixed;
+    border-radius: 60px;
+    width: 88.2%;
+    height: 53.5vh;
+    padding-top: 3vh;
+    padding-left: 5vh;
+    font-size: 120%;
+       background-color: black;
+       
+       margin-top: 13.8vh;
+       margin-left: -1vh;
+       color: green;
+       border-color: green;
+       border-width: 3px;
+     }
+     #he{
+       
+       position: fixed;
+       top: 73vh;
+       left: 0.3vh;
+       
+       width: 97.3%;
+       height: 15vh;
+       text-align: center;
+       padding-top: 6vh;
+       font-size: 150%;
+       color: green;
+       border: 3px solid green;
+      border-radius: 60px;
+       background-color: black;
+       
+     }
+     .sub{
+       padding-left: 40vh;
+     }
+}
+
+    
+  </style>
+
+</head>
+<body>
+  
+  <div id="heading">
+    <font><b>Typing Speed Cheacker</b></font><br>
+   <font class="sub"></font>
+  </div>
+   
+    <textarea name="text" id="area"placeholder="Write hear...."></textarea>
+
+        </textarea> 
+       <div id="he">
+          <font><b>Word :- </b></font>
+         <span id="word">0</span> 
+         
+          <font><b> Character:- </b></font>
+
+            <span id="char">0</span> 
+            
+  </div>
+   <script> 
+
+        let area = document.getElementById('area'); 
+
+        let char = document.getElementById('char'); 
+
+        let word = document.getElementById('word'); 
+
+  
+
+        area.addEventListener('input', function () { 
+
+            // count characters  
+
+            let content = this.value; 
+
+            char.textContent = content.length; 
+
+  
+
+            // remove empty spaces from start and end  
+
+            content.trim(); 
+
+            console.log(content); 
+
+  
+
+            let wordList = content.split(/\s/); 
+
+  
+
+            // Remove spaces from between words  
+
+            let words = wordList.filter(function (element) { 
+
+                return element != ""; 
+
+            }); 
+
+  
+
+            // count words  
+
+            word.textContent = words.length; 
+
+        }); 
+
+    </script>
+</body>
+</html>
+
+   
